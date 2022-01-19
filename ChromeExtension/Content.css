@@ -1,0 +1,111 @@
+﻿
+
+.selection_bubble {
+	font-family: 'NanumGothic'; 
+	src: url(NanumBarunGothic.ttf) 
+	format('truetype'); 
+	
+	visibility: hidden;
+	position: fixed;
+	border: solid transparent;
+	opacity: 0;
+
+	-webkit-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+	-moz-transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+	transition: bottom .3s ease-in-out, opacity .3s ease-in-out;
+
+	background-color: rgba(255, 255, 255, 0.95);
+
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(61, 61, 61, 0.658);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(61, 61, 61, 0.658);
+	box-shadow: 0px 0px 3px 1px rgba(61, 61, 61, 0.658);
+	
+  -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+  	color: black;
+	font-size: 13px;
+	font-weight: normal;
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	position: fixed;
+	width: auto;
+	min-width: 50px;
+	max-width: 400px;
+	word-wrap: break-word;
+	line-height: 130%;
+
+	z-index: 9999;
+	opacity: 1;
+	left: -9999px;
+	top: 90%;
+}
+
+
+#imagecloud{
+	width: 350px;
+	height: 200px;
+
+}
+#imagecloud:hover{
+	cursor:pointer;
+
+	transform:scale(1.5); /* 마우스 오버시 이미지 크기를 1.1 배만큼 확대시킨다. */
+
+	-o-transform:scale(1.5); 
+	-moz-transform:scale(1.5);
+
+	-webkit-transform:scale();
+
+
+	transition: transform 1.99s;  
+	-o-transition: transform 1.99s;
+	-moz-transition: transform 1.99s;
+	-webkit-transition: transform 1.99s;
+ /* 마우스 오버시 이미지가 즉시 커지지않고 30.5 second 의 시간에 걸쳐 커진다 애니메이션 효과*/
+}
+
+#gb{
+	background-color: rgba(128, 128, 128, 0.7);
+	color: white;
+	position: absolute;
+	font-size:2.em;
+	font-weight: bold;
+	font-family: 'NanumGothic'; 
+	src: url(NanumBarunGothic.ttf) 
+	format('truetype'); 
+	cursor:pointer;
+	transition:800ms ease all;
+	text-align: center;
+	height:20px;
+	width : auto;
+	border-radius: 3px;
+  }
+
+  #gb:hover{
+	background-color: rgba(128, 128, 128, 0.7);
+	background:rgba(128, 128, 128, 0.7);
+  }
+  #gb:before,#gb:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:2px;
+	width:0;
+	background: rgb(255, 255, 255); 
+	transition:400ms ease all;
+  }
+  #gb:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+  }
+  #gb:hover:before,#gb:hover:after{
+	width:100%;
+	transition:800ms ease all;
+  }
+  
+
